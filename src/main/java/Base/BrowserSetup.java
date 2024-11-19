@@ -1,6 +1,9 @@
 package Base;
 
+import Utility.ExtentReporter;
 import Utility.ReadFileData;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +15,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class BrowserSetup {
+    public static ExtentReports reports = ExtentReporter.getExtentReporter();
+    public static ExtentTest logger;
+
     public static WebDriver driver;
 
     public void initialization(){
